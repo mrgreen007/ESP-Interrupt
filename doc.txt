@@ -1,0 +1,48 @@
+Introduction:
+
+An interrupt is an event that occurs randomly in the flow of continuity. It is just like a call you have when you are busy with some work and depending upon call priority you decide whether to attend or neglect it.
+
+NodeMCU based ESP8266 has interrupt feature on its GPIO pins. This function is available on D0-D8 pins of NodeMCU Dev Kit.
+
+GPIO pin interrupts are supported through Arduino interrupt functions i.e. attachInterrupt, detachInterrupt.
+
+Interrupts can be attached to any GPIO pin, except D0/GPIO16 pin. Standard Arduino interrupt types are supported i.e. CHANGE, RISING, FALLING.
+
+Arduino Interrupt functions for NodeMCU
+Let’s see the functions that are used to set interrupts for NodeMCU kit in Arduino IDE.
+
+attachInterrupt()
+
+This function is used to attach interrupt on specified pin.
+
+Syntax: attachInterrupt(pin, ISR(callback function), interrupt type/mode);
+
+Parameters:
+
+pin: The pin number for which interrupt is to be set.
+
+ISR (callback function): The ISR to call when the interrupt occurs; this function does not take any parameters and returns nothing.
+
+Interrupt type/mode: It defines when the interrupt should be triggered.
+
+CHANGE: Used to trigger interrupt whenever pin value changes.
+
+RISING: Used to trigger interrupt when the pin goes from low to high.
+
+FALLING: Used to trigger interrupt when the pin goes from high to low.
+
+Returns: null
+
+ 
+
+detachInterrupt()
+
+This function is used to disable the interrupt on specified GPIO pin.
+
+Syntax: detachInterrupt(pin)
+
+Parameters:
+
+pin: The GPIO pin of the interrupt to disable.
+
+Returns: null
